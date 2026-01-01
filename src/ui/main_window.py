@@ -159,7 +159,7 @@ class MainWindow(QMainWindow):  # pylint: disable=too-many-instance-attributes,t
     def _load_testing_data(self):
         """Load sample images into the UI for quick testing."""
         input_meta_data = []
-        directory = "wfc/samples/"
+        directory = "samples/"
         for entry in os.scandir(directory):
             if entry.is_file():
                 input_meta_data.append((entry, os.path.basename(entry)))
