@@ -1,5 +1,6 @@
 """Video playback and generation progress widget."""
 # pylint: disable=no-name-in-module
+from pathlib import Path
 
 from PySide6.QtCore import QUrl, Qt, QRectF, Signal
 from PySide6.QtGui import QPainterPath, QPixmap, QPainter
@@ -54,6 +55,9 @@ class VideoOutputWidget(QWidget):  # pylint: disable=too-many-instance-attribute
     def __init__(self, parent: QWidget | None = None, circular_mask: bool = True):
         """Initialize UI widgets and player."""
         super().__init__(parent)
+        root = Path(__file__).resolve().parents[2]
+        self.default_video = root / "samples" / "videos" / "reversed.mp4"
+
         self.setWindowTitle("PySide6 Video Player (QGraphicsView)")
 
         self.play_button = QPushButton("Play / Pause", self)
@@ -88,7 +92,7 @@ class VideoOutputWidget(QWidget):  # pylint: disable=too-many-instance-attribute
         self.mask_button.clicked.connect(self._toggle_mask)
         self.generate_button.clicked.connect(self._start_generation)
 
-        self.set_video("../../samples/videos/reversed.mp4")
+        self.set_video(self.default_video)
 
 
     def set_video(self,video_path):
@@ -96,7 +100,7 @@ class VideoOutputWidget(QWidget):  # pylint: disable=too-many-instance-attribute
         self.sink = QVideoSink(self)
         self.sink.videoFrameChanged.connect(self._on_frame)
         self.player.setVideoSink(self.sink)
-        self.player.setSource(QUrl.fromLocalFile("../../samples/videos/reversed.mp4"))
+        self.player.setSource(QUrl.fromLocalFile(self.default_video))
         self.player.setSource(QUrl.fromLocalFile(video_path))
         self.player.setLoops(QMediaPlayer.Loops.Infinite)
         self.player.play()
