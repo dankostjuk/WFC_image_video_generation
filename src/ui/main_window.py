@@ -163,6 +163,7 @@ class MainWindow(QMainWindow):  # pylint: disable=too-many-instance-attributes,t
         for entry in os.scandir(directory):
             if entry.is_file():
                 input_meta_data.append((entry, os.path.basename(entry)))
+        input_meta_data.sort(key=lambda t: t[1].lower())
         input_items = self.app_state.add_input(self, input_meta_data)
 
         input_bar_widgets = []
