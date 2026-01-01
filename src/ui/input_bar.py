@@ -17,8 +17,8 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from wfcqt.core.converters import np_to_qimage
-from wfcqt.services.data_model import InputItem
+from src.core.converters import np_to_qimage
+from src.services.data_model import InputItem
 
 
 class PreviewInputFile(QPushButton):  # pylint: disable=too-few-public-methods

@@ -9,7 +9,7 @@ from typing import Dict
 
 import numpy as np
 
-from wfcqt.core.image_loader import ImageLoader
+from src.core.image_loader import ImageLoader
 
 @dataclass(slots=True)
 class InputItem:

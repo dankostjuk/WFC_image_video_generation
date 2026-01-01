@@ -8,8 +8,8 @@ from typing import Dict, Iterable, List
 
 import numpy as np
 
-from wfcqt.ui.settings_widget import WFCConfig
-from wfcqt.wfc.model import TileSet
+from src.ui.settings_widget import WFCConfig
+from src.wfc.model import TileSet
 
 
 class Analyzer:  # pylint: disable=too-few-public-methods

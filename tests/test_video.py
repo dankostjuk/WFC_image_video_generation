@@ -1,7 +1,7 @@
 import numpy as np
 from PIL import Image
 
-from wfcqt.wfc.video_generation import  render_one_frame
+from src.wfc.video_generation import  render_one_frame
 
 def make_rgba(w=8, h=8, color=(0, 0, 0, 0)):
     return Image.new("RGBA", (w, h), color)

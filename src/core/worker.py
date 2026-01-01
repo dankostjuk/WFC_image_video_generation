@@ -3,7 +3,7 @@
 
 from PySide6.QtCore import Slot, QRunnable
 
-from wfcqt.wfc.solver import Cancelled
+from src.wfc.solver import Cancelled
 
 
 class WFCWorker(QRunnable):  # pylint: disable=too-few-public-methods

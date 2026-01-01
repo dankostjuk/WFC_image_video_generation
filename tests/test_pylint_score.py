@@ -9,7 +9,7 @@ def test_pylint_score_threshold() -> None:
         raise AssertionError("pylint is not installed")
 
     result = subprocess.run(
-        [pylint, "wfcqt/*", "--disable=C0301,C0103"],
+        [pylint, "src/*", "--disable=C0301,C0103"],
         capture_output=True,
         text=True,
         check=False,

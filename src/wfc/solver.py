@@ -9,8 +9,8 @@ import numpy as np
 from PySide6.QtCore import Signal, QObject
 from PySide6.QtWidgets import QWidget
 
-from wfcqt.ui.settings_widget import WFCConfig
-from wfcqt.wfc.model import TileSet, WaveFunction
+from src.ui.settings_widget import WFCConfig
+from src.wfc.model import TileSet, WaveFunction
 
 
 

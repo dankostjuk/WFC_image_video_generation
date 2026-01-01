@@ -7,7 +7,7 @@ from collections import deque
 from dataclasses import dataclass
 from typing import Dict, Set
 
-from wfcqt.wfc.utilities import EntropyBuckets
+from src.wfc.utilities import EntropyBuckets
 @dataclass(frozen=True)
 class TileSet:
     """Tile set with adjacency rules and frequencies."""

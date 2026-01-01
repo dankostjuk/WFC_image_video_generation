@@ -26,18 +26,18 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from wfcqt.core.converters import np_to_qimage
-from wfcqt.core.worker import WFCWorker
-from wfcqt.services.app_state import AppState
-from wfcqt.services.data_model import InputItem
-from wfcqt.ui.browse_button import ImageBrowseButton
-from wfcqt.ui.input_bar import InputBar, PreviewInputFile
-from wfcqt.ui.output_widget import OutputWidget
-from wfcqt.ui.settings_widget import VideoConfig, WFCConfig
-from wfcqt.ui.video_output_widget import VideoOutputWidget
-from wfcqt.wfc.analyzer import Analyzer
-from wfcqt.wfc.solver import Solver
-from wfcqt.wfc.video_generation import VideoGenerator
+from src.core.converters import np_to_qimage
+from src.core.worker import WFCWorker
+from src.services.app_state import AppState
+from src.services.data_model import InputItem
+from src.ui.browse_button import ImageBrowseButton
+from src.ui.input_bar import InputBar, PreviewInputFile
+from src.ui.output_widget import OutputWidget
+from src.ui.settings_widget import VideoConfig, WFCConfig
+from src.ui.video_output_widget import VideoOutputWidget
+from src.wfc.analyzer import Analyzer
+from src.wfc.solver import Solver
+from src.wfc.video_generation import VideoGenerator
 
 
 class MainWindow(QMainWindow):  # pylint: disable=too-many-instance-attributes,too-few-public-methods

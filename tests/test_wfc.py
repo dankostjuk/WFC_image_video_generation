@@ -2,9 +2,9 @@ import numpy as np
 import pytest
 from pathlib import Path
 from PIL import Image
-from wfcqt.wfc.solver import Solver, Cancelled, Unsolvable
-from wfcqt.wfc.analyzer import Analyzer
-from wfcqt.wfc.model import TileSet
+from src.wfc.solver import Solver, Cancelled, Unsolvable
+from src.wfc.analyzer import Analyzer
+from src.wfc.model import TileSet
 
 import hashlib
 

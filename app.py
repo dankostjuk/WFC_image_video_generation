@@ -1,6 +1,6 @@
 from PySide6.QtWidgets import QApplication
 import sys
-from wfcqt.ui.main_window import MainWindow
+from src.ui.main_window import MainWindow
 
 def main() -> int:
     app: QApplication

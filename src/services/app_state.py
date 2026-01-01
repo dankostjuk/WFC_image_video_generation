@@ -6,7 +6,7 @@ from typing import Dict
 from PySide6.QtCore import QObject, Signal
 from PySide6.QtWidgets import QMessageBox, QMainWindow
 
-from wfcqt.services.data_model import InputDataModel, InputItem
+from src.services.data_model import InputDataModel, InputItem
 
 class AppState(QObject):
     """Shared UI state: input image, output image, and current config."""
