@@ -1,0 +1,10 @@
+image: python:3.11-slim
+
+stages:
+  - test
+
+test:
+  stage: test
+  script:
+    - export PYTHONPATH="$CI_PROJECT_DIR"
+    - pytest -q
