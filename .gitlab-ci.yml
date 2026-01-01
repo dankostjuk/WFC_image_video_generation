@@ -6,5 +6,5 @@ stages:
 test:
   stage: test
   script:
-    - export PYTHONPATH="$CI_PROJECT_DIR"
+    - pip install .[dev]
     - pytest -q
