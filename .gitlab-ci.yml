@@ -4,7 +4,10 @@ stages:
   - test
 
 test:
-  stage: test
+  image: python:3.11-slim
+  before_script:
+    - apt-get update
+    - apt-get install -y --no-install-recommends libglib2.0-0
   script:
     - pip install .[dev]
     - pytest -q
